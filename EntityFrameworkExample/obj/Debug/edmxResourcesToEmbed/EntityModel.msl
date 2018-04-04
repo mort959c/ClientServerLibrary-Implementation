@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="EntityModelStoreContainer" CdmEntityContainer="EntityModelContainer">
+    <EntitySetMapping Name="ItemSet">
+      <EntityTypeMapping TypeName="IsTypeOf(EntityModel.Item)">
+        <MappingFragment StoreEntitySet="ItemSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="UnitPrice" ColumnName="UnitPrice" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OrderSet">
+      <EntityTypeMapping TypeName="IsTypeOf(EntityModel.Order)">
+        <MappingFragment StoreEntitySet="OrderSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="ItemId" ColumnName="ItemId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

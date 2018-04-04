@@ -1,0 +1,5 @@
+\\data.cv.local\Students\mort959c\Documents\Tilbage på aspit\ClientServerLibrary\ClientCommunication\bin\Debug\ClientCommunication.dll
+\\data.cv.local\Students\mort959c\Documents\Tilbage på aspit\ClientServerLibrary\ClientCommunication\bin\Debug\ClientCommunication.pdb
+\\data.cv.local\Students\mort959c\Documents\Tilbage på aspit\ClientServerLibrary\ClientCommunication\obj\Debug\ClientCommunication.csproj.CoreCompileInputs.cache
+\\data.cv.local\Students\mort959c\Documents\Tilbage på aspit\ClientServerLibrary\ClientCommunication\obj\Debug\ClientCommunication.dll
+\\data.cv.local\Students\mort959c\Documents\Tilbage på aspit\ClientServerLibrary\ClientCommunication\obj\Debug\ClientCommunication.pdb

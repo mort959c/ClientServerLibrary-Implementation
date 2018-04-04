@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EntityModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="EntityModelStoreContainer">
+    <EntitySet Name="ItemSet" EntityType="EntityModel.Store.ItemSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="OrderSet" EntityType="EntityModel.Store.OrderSet" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="ItemOrder" Association="EntityModel.Store.ItemOrder">
+      <End Role="Item" EntitySet="ItemSet" />
+      <End Role="Order" EntitySet="OrderSet" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="ItemSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="UnitPrice" Type="decimal" Nullable="false" />
+    <Property Name="Description" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="OrderSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Quantity" Type="int" Nullable="false" />
+    <Property Name="ItemId" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="ItemOrder">
+    <End Role="Item" Type="EntityModel.Store.ItemSet" Multiplicity="1" />
+    <End Role="Order" Type="EntityModel.Store.OrderSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Item">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Order">
+        <PropertyRef Name="ItemId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>
